@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Chart.js JS CDN-->
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+   <title>Title</title>
+</head>
+<body>
+    <canvas id="myChart1"></canvas>
+    <div class="source">
+      <p>Source: Federal Bureau of Investigations | U.S. Census Bureau</p>
+    </div>
+    <br>
+    <div class="brief">
+      <p><i>The above line graph shows a rise in hate crimes since 2017-2018, normalized by incidents per 100,000 population to avoid tiny decimal numbers. I focused on Western states, because these are typically seen as a bastion of liberal sentiment. I think the resulting visualization brings up some interesting observations: Oregon and Washington, typically the bluest states of the bunch, lead the pack. Idaho and Nevada, the traditionally more red states, are at the bottom, even though their numbers shot up a little in 2020.</i></p>
+    </div>
+    <br>
+    <canvas id="myChart2"></canvas>
+    <div class="source">
+      <p>Source: Washington Post Data</p>
+    </div>
+    <br>
+    <div class="brief">
+      <p><i>I wanted to use the Washington Post data to see which days of the week were the most dangerous for schoolchildren in the US. Pretty simple question, pretty simple answer. It's notable that there's no "safe" day at school; all the days have a significant number of shootings in them. I think it would be interesting to see data for college shootings, e.g. Virginia Tech, included in this dataset as well, to see how that would affect the trend.</i></p>
+    </div>
+    <br>
+    <canvas id="myChart3"></canvas>
+    <div class="source">
+      <p>Source: U.S. Bureau of Labor Statistics</p>
+    </div>
+    <br>
+    <div class="brief">
+      <p><i>I had heard something on NPR a while back about how non-unionized workers in industries with nonethtless high union density make more than in industries where there is little union penetration. I think this graph shows that that is true for certain sectors of the economy - i.e. blue collar workers. I encoded the dot size to be the size of that industry by number of employees, and the grid position corresponds to the average pay and union density.<br><br>Not gonna lie I busted my ass for this last one. The tooltips were very hard to figure out, but I got there eventually. I also got nipped by the radial value for my data - the values therein are not scaled by charts.js, but in pixels. That's why the tooltip numbers are in millions - when I tried to pass them in in the thousands, as was in the data I used, the code wouldn't run because there aren't 18,000 pixels at its disposal.<br><br>One more fun note: I originally had public sector employees in here, but had to remove them because the union density was so high, it made the rest of the data illegible.</i></p>
+    </div>
+    <br>
+    <script src="javascript.js"></script>
+</body>
+</html>
